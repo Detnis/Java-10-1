@@ -2,7 +2,7 @@ package ru.netology;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RadioTest {
 
@@ -172,16 +172,18 @@ class RadioTest {
         int expected = 9;
         assertEquals(expected, actual);
     }
+
     @Test
-    public void SetInvalidVolumeOverThanLimit(){
+    public void SetInvalidVolumeOverThanLimit() {
         Radio rad = new Radio();
         rad.setCurrentVolume(11);
         int actual = rad.getCurrentVolume();
         int expected = 0;
         assertEquals(expected, actual);
     }
+
     @Test
-    public void SetInvalidVolumeBeforeThanLimit(){
+    public void SetInvalidVolumeBeforeThanLimit() {
         Radio rad = new Radio();
         rad.setCurrentVolume(-1);
         int actual = rad.getCurrentVolume();
